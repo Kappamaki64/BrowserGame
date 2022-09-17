@@ -10,9 +10,9 @@ const server = http.createServer(app)
 const io = new Server(server)
 
 io.on('connection', (socket: Socket) => {
-  console.debug(`${socket.id} connected`)
+  console.log(`${socket.id} connected`)
   socket.on('disconnect', (reason) => {
-    console.debug(`${socket.id} disconnected: ${reason}`)
+    console.log(`${socket.id} disconnected: ${reason}`)
   })
 })
 
